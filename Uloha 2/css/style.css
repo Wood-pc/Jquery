@@ -1,0 +1,474 @@
+body {
+  color: #222;
+  font: 18px/30px Georgia, serif;
+  width: 960px;
+  margin: 0 auto;
+  -webkit-font-smoothing: antialiased;
+  padding: 0 20px;
+}
+
+::-moz-selection {
+  background: #ddd;
+  color: #000;
+  text-shadow: none;
+}
+
+::selection {
+  background: #ddd;
+  color: #000;
+  text-shadow: none;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 800;
+  font-family: "open sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: brown;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+p {
+  margin: 0 0 24px;
+}
+
+.logo {
+  margin: 0;
+  position: relative;
+  top: -7px;
+}
+
+.logo a {
+  background: url("../img/logo.png") no-repeat;
+  display: block;
+  position: relative;
+  width: 960px;
+  height: 105px;
+  text-indent: -9999px;
+  z-index: 2;
+}
+
+.cover {
+  background: #fff url("../img/balloon.png") 50% 0px no-repeat;
+  height: 655px;
+  margin-top: -85px;
+  position: relative;
+  z-index: 1;
+}
+
+/*Badge má position: absolute; ale jeho rodič cover má position: relative → proto se badge nastavuje vzhledem k rodiči*/
+
+.badge {
+  background: rgb(226, 147, 0);
+  background: rgba(226, 147, 0, 0.9);
+  display: block;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+
+  color: #fff;
+  font-size: 54px;
+  line-height: 40px;
+  font-weight: 800;
+  font-family: "open sans", sans-serif;
+  text-align: center;
+  background-position: 0 40px;
+  text-decoration: none;
+
+  position: absolute;
+  bottom: 20px;
+  right: -20px;
+}
+
+.badge:hover,
+.badge:focus {
+  text-decoration: none;
+}
+
+.badge small {
+  font-size: 16px;
+  line-height: 16px;
+  font-style: italic;
+  font-weight: normal;
+  letter-spacing: 0;
+  font-family: "georgia", serif;
+  display: block;
+  padding-top: 20px;
+}
+
+.postHeader {
+  text-align: center;
+}
+
+.postMeta {
+  font-style: italic;
+}
+
+.postMeta time {
+  white-space: nowrap;
+}
+
+.postMeta time:before {
+  content: " · ";
+  font-style: normal;
+}
+
+.author {
+  font-family: "open sans", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  margin: 0 3px;
+}
+
+.postTitle {
+  font-size: 48px;
+  line-height: 56px;
+  font-family: "open sans", sans-serif;
+  font-weight: 600px;
+  letter-spacing: -2px;
+  margin: 0px 0 5px;
+}
+
+.postContent h2 {
+  font-size: 28px;
+  line-height: 30px;
+  color: #ba3925;
+  margin-top: 36px;
+  margin-bottom: 12px;
+}
+
+.postContent h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.postContent p:first-child {
+  font-size: 24px;
+  line-height: 36px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.postContent p,
+.postContent h2,
+.postContent h3 {
+  margin-left: 130px;
+  margin-right: 130px;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.pullQuote {
+  color: #787878;
+  max-width: 300px;
+}
+
+.pullQuote.float-left {
+  margin: 24px 34px 24px 0;
+}
+
+.pullQuote.float-right {
+  margin: 24px 0px 24px 34px;
+}
+
+.pullQuote q {
+  font-size: 24px;
+  line-height: 36px;
+  font-style: italic;
+}
+
+.pullQuote ol,
+.pullQuote ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.pullQuote li {
+  border-bottom: 1px dotted #aaa;
+  padding: 2px 10px;
+}
+
+.pullQuote li:last-child {
+  border: none;
+}
+
+.postFooter {
+  width: 700px;
+  margin: 60px auto;
+}
+
+.postFooter {
+  font-size: 18px;
+}
+.postFooter > h3 {
+  text-align: center;
+}
+
+.photo {
+  float: left;
+  border-radius: 50%;
+  border: 5px solid #eee;
+  margin-top: 10px;
+  padding: 5px;
+}
+
+.byline h3,
+.byline p {
+  font-size: 14px;
+  line-height: 24px;
+  margin-left: 160px;
+}
+
+.byline h3 a {
+  color: #222;
+}
+
+.preFooter {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.reviews {
+  list-style: none;
+  padding-left: 0;
+  overflow: hidden;
+}
+
+.reviews li {
+  font-size: 14px;
+  line-height: 24px;
+
+  float: left;
+  width: 220px;
+  margin-left: 10px;
+  margin-right: 10px;
+
+  position: relative;
+}
+
+.reviews li:before {
+  content: '"';
+  color: #ba3925;
+  font-size: 60px;
+  font-style: italic;
+  position: absolute;
+  top: 20px;
+  left: 0px;
+}
+
+.reviews blockquote {
+  font-style: italic;
+}
+
+.review-byline {
+  font-weight: bold;
+  padding-left: 30px;
+  margin-bottom: 8px;
+}
+
+.review-byline:before {
+  content: "- ";
+  color: #ba3925;
+}
+
+.globalFooter {
+  color: #787878;
+  font-size: 14px;
+  text-align: right;
+  padding: 15px 10px;
+}
+
+.group:before,
+.group:after {
+  content: " ";
+  display: table;
+}
+
+.group:after {
+  clear: both;
+}
+
+.group {
+  *zoom: 1;
+}
+
+/* ADAPTIVE */
+
+@media screen and (max-width: 1000px) {
+  body {
+    width: 100%;
+    padding: 0;
+  }
+
+  .logo a {
+    width: 100%;
+  }
+
+  .cover {
+    margin-top: -105px;
+  }
+
+  .badge {
+    right: 20px;
+  }
+
+  article {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  .postContent p,
+  .postContent h2,
+  .postContent {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .reviews {
+    margin-left: 50px;
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  .reviews li {
+    float: none;
+    display: inline-block;
+    vertical-align: top;
+    width: 40%;
+    min-height: 150px;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .logo {
+    top: 0px;
+  }
+
+  .logo a {
+    color: #222;
+    background: none;
+    text-indent: 0;
+    text-decoration: none;
+    font-size: 96px;
+    line-height: 76px;
+    letter-spacing: -7px;
+    text-align: center;
+  }
+
+  /*  .cover {
+    background-position: 80% 0;
+  } */
+
+  .photo {
+    float: none;
+  }
+
+  .postFooter {
+    width: 100%;
+    text-align: center;
+  }
+
+  .postFooter > h3 {
+    display: none;
+  }
+
+  .postFooter h3,
+  .postFooter p {
+    margin-left: 0;
+  }
+
+  .globalFooter {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .pullQuote.float-left,
+  .pullQuote.float-right {
+    float: none;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: none;
+    text-align: center;
+    padding: 25px 0;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .pullQuote li {
+    border: none;
+  }
+
+  .pullQuote ul {
+    margin-bottom: 0;
+  }
+
+  .reviews {
+    margin: 0 0 30px 0;
+  }
+
+  .reviews li {
+    display: block;
+    min-height: 0;
+    width: inherit;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .reviews blockquote {
+    margin-bottom: 0;
+  }
+
+  .review-byline {
+    padding-left: 0;
+  }
+
+  .reviews li:before,
+  .review-byline:before {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .logo {
+    top: 10px;
+  }
+
+  .logo a {
+    font-size: 86px;
+  }
+
+  article {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .postMeta time {
+    display: block;
+  }
+
+  .written-by,
+  .postMeta time:before {
+    display: none;
+  }
+}

@@ -1,0 +1,56 @@
+
+body {
+	background-color: #456268;
+}
+
+
+.cover,
+.fadecovers {
+	width: 600px;
+	height: 800px;
+}
+
+.fadecovers {
+	position: relative;
+	padding: 10px;
+	background: #fcf8ec;
+	border-radius: 3px;
+	left: 50%;
+	margin-left: -300px;
+	margin-top: 2%;
+}
+
+.cover {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+
+.arrow {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-color: #d0e8f2;
+	border-radius: 50%;
+	padding: 10px;
+	width: 64px;
+	height: 64px;
+	position: absolute;
+	top: 350px;
+	z-index: 2;
+	text-indent: -9999em;
+	opacity: .8;
+}
+
+.arrow:hover {
+	opacity: 1;
+}
+
+.prev {
+	background-image: url('../img/left.png');
+	left: -200px;
+}
+
+.next {
+	background-image: url('../img/right.png');
+	right: -200px;
+}

@@ -1,0 +1,12 @@
+.justin {
+	position: relative;
+}
+
+.loadin {
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	margin-left: -60px;
+	margin-top: -60px;
+	display: none;
+}
